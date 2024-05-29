@@ -1,10 +1,9 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import numberBrm from "number-brm";
 import useStore from "../../context/store";
 import { BsCart, BsHeartFill, BsHeart, BsCartFill } from "react-icons/bs";
 
-const Product = ({ data, loading, title }) => {
+const Product = ({ data, title }) => {
   const wishes = useStore((s) => s?.heart);
   const toggleHeart = useStore((s) => s.toggleHeart);
   const cart = useStore((s) => s?.cart);
@@ -61,7 +60,6 @@ const Product = ({ data, loading, title }) => {
     <div className="container">
       <h2>{title}</h2>
       <div className="wrapper">{product}</div>
-      {/* <button className="btn">Yanada ko'proq ko'rish</button> */}
     </div>
   );
 };

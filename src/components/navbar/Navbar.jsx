@@ -42,21 +42,21 @@ const Navbar = () => {
               placeholder="Search..."
               required
             />
-            <button>Qidirib topilsin</button>
+            <button>Search</button>
             {value ? <div className="serach__item">{searchItems}</div> : <></>}
           </div>
           <ul>
             <li className="nav__link">
               <Link to={"/wishlist"}>
                 <BsHeart />
-                Sevimlilar
+                Wishlist
               </Link>
               <sup className="wishes__count">{wishes.length}</sup>
             </li>
             <li className="nav__link">
               <Link to={"/cart"}>
                 <BsCart3 />
-                Savat
+                Cart
               </Link>
               <sup>{cart.length}</sup>
             </li>
